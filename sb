@@ -4,7 +4,7 @@ Plugin:
   _type: rabbitmq.Plugin
   Image:
     AlwaysPull: false
-    Image: rabbitmq
+    Image: rabbitmq-v2
     Tag: 3.8-management-alpine
   VHost: vironcorp
 ServiceDefinitionID: 127
