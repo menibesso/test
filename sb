@@ -1,0 +1,32 @@
+AfterPlugins: null
+Dependencies: null
+Plugin:
+  _type: rabbitmq.Plugin
+  Image:
+    AlwaysPull: false
+    Image: rabbitmq
+    Tag: 3.8-management-alpine
+  VHost: vironcorp
+ServiceDefinitionID: 127
+ServiceDefinitionName: backend-queue
+
+---
+AfterPlugins: null
+Dependencies: null
+Plugin:
+  _type: mysql.Plugin
+  Database: app_development
+  Image: null
+  StorageRequest: 10Gi
+ServiceDefinitionID: 148
+ServiceDefinitionName: mysql-database
+
+---
+AfterPlugins: null
+Dependencies: null
+Plugin:
+  _type: postgresql.Plugin
+  Database: app_development
+  Image: null
+  Password: ""
+  RootPassword: ""
